@@ -42,7 +42,7 @@ Jl. Malioboro No. 1, Yogyakarta
 ---
 
 ## ▶️ Cara Menjalankan Project
-1. Pastikan Anda memiliki **compiler C++** (contoh: `g++`).
+1. Pastikan Anda memiliki **compiler C++** (contoh: `g++`) dan berada dalam folder PhonebokAppTrial (ketik `cd PhonebookAppTrial` pada terminal) 
 2. Compile program:
    ```bash
    g++ main.cpp Person.cpp Phonebook.cpp -o phonebook
