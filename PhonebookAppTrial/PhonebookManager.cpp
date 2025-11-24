@@ -7,25 +7,35 @@ using namespace std;
 
 void PhonebookManager::sortContactsByName()
 {
-    sort(contacts.begin(), contacts.end(),
-         [](const Person &a, const Person &b)
-         {
-             return a.getName() < b.getName();
-         });
+    std::sort(contacts.begin(), contacts.end(),
+              [](const Person &a, const Person &b)
+              {
+                  std::string A = a.getName();
+                  std::string B = b.getName();
+
+                  std::transform(A.begin(), A.end(), A.begin(), ::tolower);
+                  std::transform(B.begin(), B.end(), B.begin(), ::tolower);
+
+                  return A < B; // cukup satu return di sini
+              });
 }
 
 void PhonebookManager::addContact()
 {
-    string name, phone, address;
+    string name, nickname, phone, email, address;
     cin.ignore();
     cout << "Enter name: ";
     getline(cin, name);
+    cout << "Enter nickname: ";
+    getline(cin, nickname);
     cout << "Enter phone: ";
     getline(cin, phone);
+    cout << "Enter email: ";
+    getline(cin, email);
     cout << "Enter address: ";
     getline(cin, address);
 
-    contacts.push_back(Person(name, phone, address));
+    contacts.push_back(Person(name, nickname, phone, email, address));
     sortContactsByName();
     cout << "Contact added successfully!\n";
 }
