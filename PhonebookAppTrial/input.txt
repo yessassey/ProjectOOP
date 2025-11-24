@@ -1,3 +1,31 @@
-Kayyis Anjay
-08797573876
-Jl kaliutrang 89
+Budi Santoso
+081234567890
+Jl. Malioboro No. 1, Yogyakarta
+Siti Aminah
+082345678901
+Jl. Diponegoro No. 2, Surabaya
+Agus Pratama
+083456789012
+Jl. Sudirman No. 3, Jakarta
+Dewi Lestari
+084567890123
+Jl. Ahmad Yani No. 4, Bandung
+Joko Widodo
+085678901234
+Jl. Merdeka No. 5, Solo
+Rina Kartika
+086789012345
+Jl. Gatot Subroto No. 6, Semarang
+Andi Saputra
+087890123456
+Jl. Imam Bonjol No. 7, Medan
+Nurul Hidayah
+088901234567
+Jl. Pattimura No. 8, Makassar
+Eko Setiawan
+089012345678
+Jl. Hasanuddin No. 9, Palembang
+Sri Wahyuni
+081112223333
+Jl. Thamrin No. 10, Jakarta
+
