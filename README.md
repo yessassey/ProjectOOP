@@ -1,6 +1,7 @@
 # 📒 Phonebook Console App (C++)
 
 ## 📌 Deskripsi Aplikasi
+Judul Projek: Aplikasi Phonebook Berbasis Console Menggunakan Konsep Pemrograman Berorientasi Objek (OOP) dalam C++ 
 Aplikasi ini adalah **Phonebook berbasis console** yang memungkinkan pengguna untuk:
 - Menambahkan kontak baru
 - Mengedit kontak
@@ -31,7 +32,7 @@ Jl. Malioboro No. 1, Yogyakarta
 
 ---
 
-## 👥 Anggota Project
+## 👥 Anggota Project (NIM | Nama)
 - 25/556848/TK/62818 | Kayyisa Nur Lathifa
 - 25/557140/TK/62874 | Muhammad Yusuf Akbar 
 - 25/562156/TK/63542 | Nida Nur Hafizhah
