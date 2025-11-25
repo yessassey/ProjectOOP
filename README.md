@@ -52,6 +52,8 @@ Jl. Malioboro No. 1, Yogyakarta
    ./phonebook
    ```
 4. Pastikan file `input.txt` tersedia untuk fitur **Load from File**.
+5. File `output.txt` terupdate setelah menggunakan fitur  **Save to a File**
+6. Untuk penggunaan selanjutnya, pastikan copy-paste kontak dari `output.txt` ke `input.txt` agar data terbaru dapat digunakan kembali.
 
 ---
 
