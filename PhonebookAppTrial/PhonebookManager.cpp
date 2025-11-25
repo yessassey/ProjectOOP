@@ -137,7 +137,7 @@ void PhonebookManager::searchContact()
 
 void PhonebookManager::loadFromFile(const string &filename)
 {
-    ifstream inFile(filename);
+    ifstream inFile(filename, ios::binary);
     if (!inFile)
     {
         cout << "File not found.\n";
