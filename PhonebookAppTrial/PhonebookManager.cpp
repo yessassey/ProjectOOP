@@ -76,15 +76,19 @@ void PhonebookManager::editContact()
         return;
     }
 
-    string name, phone, address;
+    string name, nickname, phone, email, address;
     cout << "Enter new name: ";
     getline(cin, name);
+    cout << "Enter new nickname: ";
+    getline(cin, nickname);
     cout << "Enter new phone: ";
     getline(cin, phone);
+    cout << "Enter new email: ";
+    getline(cin, email);
     cout << "Enter new address: ";
     getline(cin, address);
 
-    contacts[index - 1] = Person(name, phone, address);
+    contacts[index - 1] = Person(name, nickname, phone, email, address);
     sortContactsByName();
     cout << "Contact updated successfully!\n";
 }
@@ -141,10 +145,10 @@ void PhonebookManager::loadFromFile(const string &filename)
     }
 
     contacts.clear();
-    string name, phone, address;
-    while (getline(inFile, name) && getline(inFile, phone) && getline(inFile, address))
+    string name, nickname, phone, email, address;
+    while (getline(inFile, name) && getline(inFile, nickname) && getline(inFile, phone) && getline(inFile, email) && getline(inFile, address))
     {
-        contacts.push_back(Person(name, phone, address));
+        contacts.push_back(Person(name, nickname, phone, email, address));
     }
     inFile.close();
     sortContactsByName();
@@ -157,7 +161,9 @@ void PhonebookManager::saveToFile(const string &filename)
     for (const auto &c : contacts)
     {
         outFile << c.getName() << "\n"
+                << c.getNickname() << "\n"
                 << c.getPhone() << "\n"
+                << c.getEmail() << "\n"
                 << c.getAddress() << "\n";
     }
     outFile.close();
