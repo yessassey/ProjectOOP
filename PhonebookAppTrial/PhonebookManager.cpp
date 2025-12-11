@@ -2,22 +2,21 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
-
 using namespace std;
 
 void PhonebookManager::sortContactsByName()
 {
-    std::sort(contacts.begin(), contacts.end(),
-              [](const Person &a, const Person &b)
-              {
-                  std::string A = a.getName();
-                  std::string B = b.getName();
+    sort(contacts.begin(), contacts.end(),
+         [](const Person &a, const Person &b)
+         {
+             string A = a.getName();
+             string B = b.getName();
 
-                  std::transform(A.begin(), A.end(), A.begin(), ::tolower);
-                  std::transform(B.begin(), B.end(), B.begin(), ::tolower);
+             transform(A.begin(), A.end(), A.begin(), ::tolower);
+             transform(B.begin(), B.end(), B.begin(), ::tolower);
 
-                  return A < B; // cukup satu return di sini
-              });
+             return A < B; // cukup satu return di sini
+         });
 }
 
 void PhonebookManager::addContact()

@@ -45,10 +45,10 @@ int main()
             manager.saveToFile("output.txt");
             break;
         case 0:
-            std::cout << "Exiting...\n";
+            cout << "Exiting...\n";
             break;
         default:
-            std::cout << "Invalid choice! Please try again.\n";
+            cout << "Invalid choice! Please try again.\n";
         }
     } while (choice != 0);
 

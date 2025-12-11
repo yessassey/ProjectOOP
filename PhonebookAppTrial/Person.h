@@ -3,30 +3,31 @@
 
 #include <string>
 #include <iostream>
+using namespace std;
 
 class Person
 {
 private:
-    std::string name;
-    std::string nickname;
-    std::string phone;
-    std::string email;
-    std::string address;
+    string name;
+    string nickname;
+    string phone;
+    string email;
+    string address;
 
 public:
-    Person(std::string n = "", std::string nn = "", std::string p = "", std::string e = "", std::string a = "");
+    Person(string n = "", string nn = "", string p = "", string e = "", string a = "");
 
-    void setName(const std::string &n);
-    void setNickname(const std::string &nn);
-    void setPhone(const std::string &p);
-    void setEmail(const std::string &e);
-    void setAddress(const std::string &a);
+    void setName(const string &n);
+    void setNickname(const string &nn);
+    void setPhone(const string &p);
+    void setEmail(const string &e);
+    void setAddress(const string &a);
 
-    std::string getName() const;
-    std::string getNickname() const;
-    std::string getPhone() const;
-    std::string getEmail() const;
-    std::string getAddress() const;
+    string getName() const;
+    string getNickname() const;
+    string getPhone() const;
+    string getEmail() const;
+    string getAddress() const;
 
     void print() const;
 };

@@ -4,11 +4,12 @@
 #include <vector>
 #include <string>
 #include "Person.h"
+using namespace std;
 
 class PhonebookManager
 {
 private:
-    std::vector<Person> contacts;
+    vector<Person> contacts;
 
 public:
     void addContact();
@@ -16,8 +17,8 @@ public:
     void deleteContact();
     void viewContacts();
     void searchContact();
-    void loadFromFile(const std::string &filename);
-    void saveToFile(const std::string &filename);
+    void loadFromFile(const string &filename);
+    void saveToFile(const string &filename);
     void sortContactsByName();
 };
 
