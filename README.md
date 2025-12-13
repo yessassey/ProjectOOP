@@ -1,4 +1,4 @@
-# 📒 Phonebook App (C++)
+# 📒 Phonebook GUI App (C++)
 
 ## 📌 Deskripsi Aplikasi
 Judul Projek: Aplikasi Phonebook Berbasis GUI dengan Pendekatan Pemrograman Berorientasi Objek (OOP) dalam C++
