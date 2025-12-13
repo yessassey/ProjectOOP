@@ -2,23 +2,35 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+
 using namespace std;
 
-void PhonebookManager::sortContactsByName()
+// gui methods
+void PhonebookManager::addContact(const Person &p)
 {
-    sort(contacts.begin(), contacts.end(),
-         [](const Person &a, const Person &b)
-         {
-             string A = a.getName();
-             string B = b.getName();
-
-             transform(A.begin(), A.end(), A.begin(), ::tolower);
-             transform(B.begin(), B.end(), B.begin(), ::tolower);
-
-             return A < B; // cukup satu return di sini
-         });
+    contacts.push_back(p);
+    sortContactsByName();
 }
 
+void PhonebookManager::editContact(int index, const Person &p)
+{
+    if (index >= 0 && index < (int)contacts.size())
+    {
+        contacts[index] = p;
+        sortContactsByName();
+    }
+}
+
+void PhonebookManager::deleteContact(int index)
+{
+    if (index >= 0 && index < (int)contacts.size())
+    {
+        contacts.erase(contacts.begin() + index);
+        sortContactsByName();
+    }
+}
+
+// original methods from console
 void PhonebookManager::addContact()
 {
     string name, nickname, phone, email, address;
@@ -37,25 +49,6 @@ void PhonebookManager::addContact()
     contacts.push_back(Person(name, nickname, phone, email, address));
     sortContactsByName();
     cout << "Contact added successfully!\n";
-}
-
-void PhonebookManager::viewContacts()
-{
-    if (contacts.empty())
-    {
-        cout << "No contacts available.\n";
-        return;
-    }
-
-    sortContactsByName(); // <--- WAJIB
-
-    cout << "\n===== CONTACT LIST (Sorted A-Z by Name) =====\n";
-    for (size_t i = 0; i < contacts.size(); ++i)
-    {
-        cout << i + 1 << ". ";
-        contacts[i].print();
-        cout << "-----------------\n";
-    }
 }
 
 void PhonebookManager::editContact()
@@ -112,28 +105,42 @@ void PhonebookManager::deleteContact()
     sortContactsByName();
     cout << "Contact deleted successfully!\n";
 }
-
-void PhonebookManager::searchContact()
+// view and search contacts
+void PhonebookManager::viewContacts()
 {
-    cin.ignore();
-    string keyword;
-    cout << "Enter name to search: ";
-    getline(cin, keyword);
-
-    bool found = false;
-    for (const auto &c : contacts)
+    if (contacts.empty())
     {
-        if (c.getName().find(keyword) != string::npos)
-        {
-            c.print();
-            cout << "-----------------\n";
-            found = true;
-        }
+        cout << "No contacts available.\n";
+        return;
     }
-    if (!found)
-        cout << "No contact found with that name.\n";
+
+    sortContactsByName();
+
+    cout << "\n===== CONTACT LIST (Sorted A-Z by Name) =====\n";
+    for (size_t i = 0; i < contacts.size(); ++i)
+    {
+        cout << i + 1 << ". ";
+        contacts[i].print();
+        cout << "-----------------\n";
+    }
 }
 
+vector<Person> PhonebookManager::searchContact(const string &keyword)
+{
+    vector<Person> result;
+    for (const auto &c : contacts)
+    {
+        if (c.getName().find(keyword) != string::npos ||
+            c.getNickname().find(keyword) != string::npos ||
+            c.getPhone().find(keyword) != string::npos)
+        {
+            result.push_back(c);
+        }
+    }
+    return result;
+}
+
+// file i/o
 void PhonebookManager::loadFromFile(const string &filename)
 {
     ifstream inFile(filename, ios::binary);
@@ -145,10 +152,13 @@ void PhonebookManager::loadFromFile(const string &filename)
 
     contacts.clear();
     string name, nickname, phone, email, address;
-    while (getline(inFile, name) && getline(inFile, nickname) && getline(inFile, phone) && getline(inFile, email) && getline(inFile, address))
+    while (getline(inFile, name) && getline(inFile, nickname) &&
+           getline(inFile, phone) && getline(inFile, email) &&
+           getline(inFile, address))
     {
         contacts.push_back(Person(name, nickname, phone, email, address));
     }
+
     inFile.close();
     sortContactsByName();
     cout << "Contacts loaded from file.\n";
@@ -167,4 +177,18 @@ void PhonebookManager::saveToFile(const string &filename)
     }
     outFile.close();
     cout << "Contacts saved to file.\n";
+}
+
+// sort contacts by alphabetical order
+void PhonebookManager::sortContactsByName()
+{
+    sort(contacts.begin(), contacts.end(),
+         [](const Person &a, const Person &b)
+         {
+             string A = a.getName();
+             string B = b.getName();
+             transform(A.begin(), A.end(), A.begin(), ::tolower);
+             transform(B.begin(), B.end(), B.begin(), ::tolower);
+             return A < B;
+         });
 }
