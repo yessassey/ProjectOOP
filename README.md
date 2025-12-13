@@ -1,9 +1,9 @@
-# 📒 Phonebook GUI App (C++)
+# 📒 Phonebook Console App (C++)
 
 ## 📌 Deskripsi Aplikasi
-Judul Projek: Aplikasi Phonebook Berbasis GUI dengan Pendekatan Pemrograman Berorientasi Objek (OOP) dalam C++
+Judul Projek: Aplikasi Phonebook Berbasis Console Menggunakan Konsep Pemrograman Berorientasi Objek (OOP) dalam C++ 
 
-Aplikasi ini adalah **Phonebook berbasis GUI** yang memungkinkan pengguna untuk:
+Aplikasi ini adalah Phonebook berbasis console yang memungkinkan pengguna untuk:
 - Menambahkan kontak baru
 - Mengedit kontak
 - Menghapus kontak
@@ -11,6 +11,25 @@ Aplikasi ini adalah **Phonebook berbasis GUI** yang memungkinkan pengguna untuk:
 - Mencari kontak berdasarkan nama
 - Menyimpan kontak ke file
 - Memuat kontak dari file
+
+Format file input:
+```
+Nama Panjang
+Nama Panggilan
+Nomor Telepon
+Email
+Alamat
+
+```
+
+Contoh:
+```
+Budi Santoso
+Budi
+081234567890
+budi.santoso@example.com
+Jl. Malioboro No. 1, Yogyakarta
+```
 
 ---
 
@@ -23,11 +42,17 @@ Aplikasi ini adalah **Phonebook berbasis GUI** yang memungkinkan pengguna untuk:
 ---
 
 ## ▶️ Cara Menjalankan Project
-1. Pastikan Anda memiliki **compiler C++** (contoh: `g++`) dan berada dalam folder PhonebokAppTrial (ketik `cd PhonebookAppTrial` pada terminal)
-2. jgvyjk
-3. ,hgchf
-4. Pastikan file `input.txt` tersedia untuk fitur **Load from File**.
-5. File `output.txt` terupdate setelah menggunakan fitur  **Save to a File**
+1. Pastikan Anda memiliki compiler C++ (contoh: `g++`) dan berada dalam folder PhonebokAppTrial (ketik `cd PhonebookAppTrial` pada terminal) 
+2. Compile program:
+   ```bash
+   g++ main.cpp Person.cpp Phonebook.cpp -o phonebook
+   ```
+3. Jalankan program:
+   ```bash
+   ./phonebook
+   ```
+4. Pastikan file `input.txt` tersedia untuk fitur Load from File.
+5. File `output.txt` terupdate setelah menggunakan fitur  Save to a File
 6. Untuk penggunaan selanjutnya, pastikan copy-paste kontak dari `output.txt` ke `input.txt` agar data terbaru dapat digunakan kembali.
 
 ---
