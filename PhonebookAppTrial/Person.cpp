@@ -1,4 +1,5 @@
 #include "Person.h"
+
 using namespace std;
 
 Person::Person(string n, string nn, string p, string e, string a)
@@ -18,9 +19,9 @@ string Person::getAddress() const { return address; }
 
 void Person::print() const
 {
-    cout << "Name: " << name
-         << "\nNickname: " << nickname
-         << "\nPhone: " << phone
-         << "\nEmail: " << email
-         << "\nAddress: " << address << "\n";
+    cout << "Name: " << name << "\n"
+         << "Nickname: " << nickname << "\n"
+         << "Phone: " << phone << "\n"
+         << "Email: " << email << "\n"
+         << "Address: " << address << "\n";
 }

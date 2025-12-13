@@ -1,50 +1,50 @@
-Budi Santoso
-Budi
-081234567890
-budi.santoso@example.com
-Jl. Malioboro No. 1, Yogyakarta
-Siti Aminah
-Siti
-082345678901
-siti.aminah@example.com
-Jl. Diponegoro No. 2, Surabaya
-Agus Pratama
-Agus
-083456789012
-agus.pratama@example.com
-Jl. Sudirman No. 3, Jakarta
-Dewi Lestari
-Dewi
-084567890123
-dewi.lestari@example.com
-Jl. Ahmad Yani No. 4, Bandung
-Joko Widodo
-Joko
-085678901234
-joko.widodo@example.com
-Jl. Merdeka No. 5, Solo
-Rina Kartika
-Rina
-086789012345
-rina.kartika@example.com
-Jl. Gatot Subroto No. 6, Semarang
-Andi Saputra
-Andi
-087890123456
-andi.saputra@example.com
-Jl. Imam Bonjol No. 7, Medan
-Nurul Hidayah
-Nurul
-088901234567
-nurul.hidayah@example.com
-Jl. Pattimura No. 8, Makassar
-Eko Setiawan
-Eko
-089012345678
-eko.setiawan@example.com
-Jl. Hasanuddin No. 9, Palembang
-Sri Wahyuni
-Sri
-081112223333
-sri.wahyuni@example.com
-Jl. Thamrin No. 10, Jakarta
+Agus Pratama
+Agus
+083456789012
+agus.pratama@example.com
+Jl. Sudirman No. 3, Jakarta
+Andi Saputra
+Andi
+087890123456
+andi.saputra@example.com
+Jl. Imam Bonjol No. 7, Medan
+Budi Santoso
+Budi
+081234567890
+budi.santoso@example.com
+Jl. Malioboro No. 1, Yogyakarta
+Dewi Lestari
+Dewi
+084567890123
+dewi.lestari@example.com
+Jl. Ahmad Yani No. 4, Bandung
+Eko Setiawan
+Eko
+089012345678
+eko.setiawan@example.com
+Jl. Hasanuddin No. 9, Palembang
+Joko Widodo
+Joko
+085678901234
+joko.widodo@example.com
+Jl. Merdeka No. 5, Solo
+Nurul Hidayah
+Nurul
+088901234567
+nurul.hidayah@example.com
+Jl. Pattimura No. 8, Makassar
+Rina Kartika
+Rina
+086789012345
+rina.kartika@example.com
+Jl. Gatot Subroto No. 6, Semarang
+Siti Aminah
+Siti
+082345678901
+siti.aminah@example.com
+Jl. Diponegoro No. 2, Surabaya
+Sri Wahyuni
+Sri
+081112223333
+sri.wahyuni@example.com
+Jl. Thamrin No. 10, Jakarta
